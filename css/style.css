@@ -1,27 +1,42 @@
 body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
-main>h3 {
-  color: aqua;
+/* ID Item Selector */
+#griditemcontainer {
   display: grid;
-  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-.headers {
+/* Class Item Selector */
+.griditem {
+  border: solid 2px blue;
+  padding: 0px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Descendant Selector (Space) */
+.griditem p {
+  font-size: large;
+  font-style: normal;
+  word-wrap: normal;
   color: blue;
 }
 
-#catimage {
-  display: grid;
-  justify-content: center;
+/* Child Selector (>) */
+.griditem>img {
+  width: 456px;
+  height: auto;
+  box-sizing: border-box;
 }
 
-article p {
-  font-size: 2.5rem;
-}
-
-#text+p {
-  color: chocolate;
+/* Adjacent Selector (+) */
+img+h1 {
+  color: red;
+  font-weight: bold;
+  background-color: aliceblue;
 }
